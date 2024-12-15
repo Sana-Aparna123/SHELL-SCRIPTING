@@ -10,3 +10,11 @@ superstar
 uptime
 powerstar
 free -h
+
+# ./std-script.sh 2> /dev/null -->only print success info
+# ./std-script.sh 1> /dev/null -->only print error info
+# ./std-script.sh > /dev/null 2>&1  --> redirecting the standard error into standard output and send both to the /dev/null
+# ./std-script.sh > /tmp/test 2>&1
+# cat /tmp/test
+# ./std-script.sh > /tmp/test1 1>&2
+# cat /tmp/test1
