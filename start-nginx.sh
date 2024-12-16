@@ -6,4 +6,5 @@ then
 echo "The Service ${SERVICE} is Already Up and Running"
 else
 service $1 start
+echo "Started ${SERVICE} Successfully"
 fi
