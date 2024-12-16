@@ -6,3 +6,5 @@
 export AWS_ACCESS_KEY_ID='AKIA2KX4BUZ2X4XTJ7NF'
 export AWS_SECRET_ACCESS_KEY='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'
 export AWS_DEFAULT_REGION='us-east-1'
+
+$# -->Calculates the number of arguments/parameters is given to a script.
