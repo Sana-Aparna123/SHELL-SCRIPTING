@@ -20,7 +20,7 @@ if [ $# -gt 0 ]; then
         user=$(cat /etc/passwd | grep -i $USERNAME | awk '{print $1}' | cut -d ":" -f 1)
         echo "${user}"
         echo "please provide the password for ${USERNAME}"
-        SPEC=$(echo '$#@^&*()_' | fold -1 | shuf | head -1)
+        SPEC=$(echo '$#@^&*()_' | fold -w1 | shuf | head -1)
         PASSWORD="India@${RANDOM}${SPEC}"
         echo "${USERNAME}:${PASSWORD}" | chpasswd
         # echo "${PASSWORD}"
