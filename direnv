@@ -1,0 +1,66 @@
+Development Team: mkdir DEV
+ENV="DEVELOPMENT"
+OWNER="JAVA-DEV-TEAM"
+
+
+Production Team: mkdir PROD
+ENV="PRODUCTION"
+OWNER="JAVA-PROD-TEAM"
+
+
+
+*login to ubuntu instance and run these commands
+
+mkdir DEV
+
+mkdir PROD
+
+apt update && sudo apt-get install direnv -y
+
+Add eval "$(direnv hook bash)" in .bashrc file and performance source .bashrc
+
+cd DEV
+
+nano .envrc
+----------------
+ENV="DEVELOPMENT"
+OWNER="JAVA-DEV-TEAM"
+AWS_ACCESS_KEY_ID=WELCOME123DEV
+AWS_SECRET_ACCESS_KEY=WELCOME456DEV
+AWS_DEFAULT_REGION=WELCOME789DEV
+
+direnv allow .
+
+exit
+
+sudo su -
+
+cp DEV/.envrc PROD/
+ 
+cd PROD
+
+
+nano .envrc
+----------------
+ENV="PRODUCTION"
+OWNER="JAVA-PROD-TEAM"
+AWS_ACCESS_KEY_ID=WELCOME123PROD
+AWS_SECRET_ACCESS_KEY=WELCOME456PROD
+AWS_DEFAULT_REGION=WELCOME789PROD
+
+direnv allow .
+
+exit
+
+come to root user
+
+sudo su -
+
+export ENV="MEGASTAR"
+export OWNER="SUPERSTAR"
+export AWS_ACCESS_KEY_ID=WELCOME123DEFAULT
+export AWS_SECRET_ACCESS_KEY=WELCOME456DEFAULT
+export AWS_DEFAULT_REGION=WELCOME789DEFAULT
+
+
+
